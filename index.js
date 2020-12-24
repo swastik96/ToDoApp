@@ -1,4 +1,4 @@
-let CardObj = {};
+const CardArray = [];
 
 var popUpAddList = document.querySelector(".popup-add-list");
 console.log(popUpAddList);
@@ -31,7 +31,8 @@ function addList(){
         alert("Please Enter the List Name");
         return;
     }
-
+    var CardObj = {};
+    CardObj.Heading = listHeading;
     popUpAddList.style.display = "none";
     var blur = document.querySelector(".heading");
     blur.classList.toggle("blur-effect-add-list");
@@ -57,4 +58,7 @@ function addList(){
                     </div>`;
 
     document.querySelector(".card-list-container").appendChild(addList);
+
+    CardArray.push(CardObj);
 }
+
