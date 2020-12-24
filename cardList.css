@@ -1,0 +1,33 @@
+.card-list{
+    /* margin-top: 20px; */
+    height: 23rem;
+    width: 16rem;
+    background-color: aqua;
+    border-radius: 15px;
+    /* border: 2px solid white; */
+    box-shadow: 2px 6px 6px cadetblue,-2px -6px 6px cadetblue;
+    position: relative;
+}
+
+.heading-card-list{
+    /* height: 4rem; */
+    padding-top: 1.5rem;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.footer-card-list{
+    position: absolute;
+    bottom: 7px;
+    right: 10px;
+}
+
+.add-button-card-list{
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background-color: aqua;
+    outline: none;
+    border: 0px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./cardList.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="heading">
+            <p class="heading-text">Tasks List</p>
+            <div class="heading-add-button">
+                <button class="add-button">
+                    <i class="fa fa-plus-circle" style="color: rgb(70, 224, 83);"></i>
+                    <p class="heading-btn-text">Add Item</p>
+                </button>
+            </div>
+        </div>
+    
+        <div class="popup-add-list-container">
+        <div class="popup-add-list">
+            <div>
+                <label for="input-add-list-popup" class="label-add-list-popup">Add List</label><br>
+                <input type="text" name="input-add-list-popup" id="input-add-list" class="input-add-list-popup">
+            </div>
+            
+            <div class="add-close-btn-popup">
+                <button class="add-btn-popup" onclick="addList()">Add</button>
+                <button class="close-btn-popup">Close</button>
+            </div>
+        </div>
+        </div>
+        
+        <div class="card-list-container">
+            <!-- Add List Dynamically from JS -->
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
