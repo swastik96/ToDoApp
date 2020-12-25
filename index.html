@@ -39,6 +39,19 @@
         <div class="card-list-container">
             <!-- Add List Dynamically from JS -->
         </div>
+
+        <div class="popup-add-task">
+            <div>
+                <label for="input-add-task-popup" class="label-add-list-popup">Add Task</label><br>
+                <input type="text" name="input-add-task-popup" id="input-add-task" class="input-add-list-popup">
+            </div>
+            
+            <div class="add-close-btn-popup">
+                <button class="add-btn-popup" onclick="addTask()">Add</button>
+                <button class="close-btn-popup" onclick="closeTaskPopUp()">Close</button>
+            </div>
+        </div>
+
     </div>
 
     <script src="./index.js"></script>

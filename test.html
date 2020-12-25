@@ -13,16 +13,36 @@
     <div class="card-list">
         <div class="heading-card-list">
             Heading<hr style="border: 0px;background-color: blue;height: 3px;">
-            <div class="footer-card-list">
-                <button class="add-button-card-list">
-                    <i class="fa fa-trash-o" style="color: blue;"></i>
-                </button>
-                <button class="add-button-card-list">
-                    <i class="fa fa-plus-circle" style="color: blue;"></i>
-                </button>
+        </div>
+        <div class="task-list">
+            <div class="task-row">
+                <div class="task-name">TASK Name</div>
+                <div><button class="mark-done">Mark As Done</button></div>
             </div>
+        </div>
+        <div class="footer-card-list">
+            <button class="add-button-card-list">
+                <i class="fa fa-trash-o" style="color: blue;"></i>
+            </button>
+            <button class="add-button-card-list" id="check" onClick="addTaskPopUp(this.id)">
+                <i class="fa fa-plus-circle" style="color: blue;"></i>
+            </button>
         </div>
     </div>
 
+    <div class="popup-add-task">
+        <div>
+            <label for="input-add-task-popup" class="label-add-list-popup">Add List</label><br>
+            <input type="text" name="input-add-task-popup" id="input-add-task" class="input-add-list-popup">
+        </div>
+        
+        <div class="add-close-btn-popup">
+            <button class="add-btn-popup" onclick="addTask()">Add</button>
+            <button class="close-btn-popup" onclick="closeTaskPopUp()">Close</button>
+        </div>
+    </div>
+    
+
+    <script src="./test.js"></script>
 </body>
 </html>

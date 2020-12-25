@@ -145,11 +145,63 @@ p{
     margin-top: 3%;
     display: flex;
     justify-content: space-around;
-    height: 500px;
+    height: 650px;
     overflow: auto;
     flex-wrap: wrap;
     gap: 4rem;
     align-items: center;
+}
+
+.popup-add-task{
+    background-color: aqua;
+    height: 11rem;
+    width: 22rem;
+    border-radius: 1rem;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 30px;
+    text-align: center;
+    z-index: 1;
+    border: 3px solid blue;
+    display: none;
+}
+
+.blur-effect-task{
+    filter: blur(4px);
+    opacity: 0.8px;
+}
+
+.task-list{
+    height: 13rem;
+    overflow: auto;
+}
+
+.task-row{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.task-name{
+    /* padding-right: 10px; */
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.mark-done{
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+.mark-done:hover{
+    background-color: cornflowerblue;
 }
 
 
