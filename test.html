@@ -46,3 +46,22 @@
     <script src="./test.js"></script>
 </body>
 </html>
+
+
+<div class="card-list">
+    <div class="heading-card-list">
+        ${listHeading}<hr style="border: 0px;background-color: blue;height: 3px;">
+    </div>
+    <div class="task-list">
+        <div class="task-name">${taskName}</div>
+        <div><button class="mark-done">Mark As Done</button></div>
+    </div>
+    <div class="footer-card-list">
+        <button class="add-button-card-list">
+            <i class="fa fa-trash-o" style="color: blue;"></i>
+        </button>
+        <button class="add-button-card-list" id=${addTaskID} onclick="addTaskPopUp(this.id)">
+            <i class="fa fa-plus-circle" style="color: blue;"></i>
+        </button>
+    </div>
+</div>
