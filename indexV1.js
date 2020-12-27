@@ -5,7 +5,8 @@ var taskID
 var popUpAddList = document.querySelector(".popup-add-list");
 console.log(popUpAddList);
 var add = document.querySelector(".add-button");
-console.log(add)
+console.log(add);
+
 add.addEventListener("click",()=>{
     console.log("Clicked");
     popUpAddList.style.display = "block";
@@ -101,6 +102,14 @@ function markAsDone(doneId){
     renderAllCards();
 }
 
+function deleteList(deleteID){
+    console.log(deleteID);
+    var getDeleteID = Number(deleteID.charAt(0));
+    console.log(getDeleteID);
+    CardArray.splice(getDeleteID,1);
+    renderAllCards();
+}
+
 function renderAllCards(){
     console.log("check1")
     const ele = document.querySelector('.card-list-container');
@@ -120,7 +129,7 @@ function renderAllCards(){
                                 <div class="task-list">
                                 </div>
                                 <div class="footer-card-list">
-                                    <button class="add-button-card-list">
+                                    <button class="add-button-card-list" id=${i+"delete"} onClick="deleteList(this.id)">
                                         <i class="fa fa-trash-o" style="color: blue;"></i>
                                     </button>
                                     <button class="add-button-card-list" id=${i} onclick="addTaskPopUp(this.id)">
