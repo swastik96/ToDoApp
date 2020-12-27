@@ -33,3 +33,7 @@ function addTask(){
     document.querySelector(".popup-add-task").style.display = 'none';
 }
 
+function markAsDone(){
+    document.querySelector(".mark-done").classList.add("mark-done-clicked");
+    document.querySelector(".task-row").classList.add("strike-content");
+}

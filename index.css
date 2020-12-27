@@ -204,7 +204,15 @@ p{
     background-color: cornflowerblue;
 }
 
+.mark-done-clicked{
+    display: none;
+}
 
+.strike-content{
+    text-decoration: line-through;
+    color: red;
+    justify-content: center;
+}
 
 
 

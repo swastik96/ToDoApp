@@ -50,8 +50,6 @@ function addList(){
     
 }
 
-
-
 //Add tasks
 function addTaskPopUp(Tid){
     taskID = Tid;
@@ -91,6 +89,18 @@ function addTask(){
     renderAllCards();
 }
 
+function markAsDone(doneId){
+    console.log(doneId);
+    var jID = Number(doneId.charAt(doneId.length - 1));
+    var iID = Number(doneId.charAt(0));
+    console.log(jID);
+    console.log(iID);
+    console.log(typeof(iID));
+    console.log(typeof(jID));
+    CardArray[iID].TaskListObjArray[jID].isDone = true
+    renderAllCards();
+}
+
 function renderAllCards(){
     console.log("check1")
     const ele = document.querySelector('.card-list-container');
@@ -124,10 +134,14 @@ function renderAllCards(){
             var addTask = document.createElement('div');
             addTask.className = "task-row";
             addTask.innerHTML = `<div class="task-name">${CardArray[i].TaskListObjArray[j].taskTitle}</div>
-                                <div><button class="mark-done">Done</button></div>`
+                                <div><button class="mark-done" id=${i+"Done"+j} onClick="markAsDone(this.id)">Done</button></div>`
             document.getElementById(i).parentElement.previousElementSibling.appendChild(addTask);
-        }
-        
+            console.log(CardArray[i].TaskListObjArray[j].isDone);
+            if(CardArray[i].TaskListObjArray[j].isDone){
+                document.getElementById(i+"Done"+j).parentElement.parentElement.classList.add("strike-content");
+                document.getElementById(i+"Done"+j).classList.add("mark-done-clicked");
+            }
+        }   
         
     }
 }
