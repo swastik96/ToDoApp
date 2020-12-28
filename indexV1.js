@@ -1,11 +1,13 @@
-const CardArray = [];
+let CardArray = [];
+
+getLocalStorage();
 
 var taskID
 
 var popUpAddList = document.querySelector(".popup-add-list");
-console.log(popUpAddList);
+//console.log(popUpAddList);
 var add = document.querySelector(".add-button");
-console.log(add);
+//console.log(add);
 
 add.addEventListener("click",()=>{
     console.log("Clicked");
@@ -110,7 +112,24 @@ function deleteList(deleteID){
     renderAllCards();
 }
 
+function setLocalStorage(){
+    localStorage.setItem('CardArrayL',JSON.stringify(CardArray))
+}
+
+function getLocalStorage(){
+    let getData = JSON.parse(localStorage.getItem('CardArrayL'));
+
+    if(!getData)
+        return;
+    
+    console.log(getData);
+
+    CardArray = getData;
+    renderAllCards();
+}
+
 function renderAllCards(){
+    setLocalStorage();
     console.log("check1")
     const ele = document.querySelector('.card-list-container');
     var childEle = ele.lastElementChild;
