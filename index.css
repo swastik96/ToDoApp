@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-color: black;
+    background-color: #282c34;
 }
 
 button{
@@ -10,7 +10,7 @@ button{
 
 .main-container{
     margin: auto;
-    background-color: black;
+    background-color: #282c34;
 }
 
 .heading{
